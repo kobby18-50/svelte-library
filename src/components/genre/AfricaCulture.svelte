@@ -7,9 +7,11 @@
 	fetchData().then((res) => {
 		books = res.data;
 
+		
 		books = books.filter((book) => {
 			return book.genre.includes('culture')
 		})
+		
 	});
 </script>
 
