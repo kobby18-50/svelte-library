@@ -34,7 +34,7 @@
 
 </script>
 
-<main class="mx-10">
+<main class="sm:mx-5 lg:mx-10">
 	<h1 class="font-bold text-2xl">Upload Book</h1>
 	<form on:submit|preventDefault={handleUpdate}>
 		<div class="my-5">

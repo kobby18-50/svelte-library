@@ -4,7 +4,7 @@
     export let book : BOOK
 </script>
 
-<div class="card w-96 bg-[#FCFCFC] shadow-md p-5">
+<div class="card bg-[#FCFCFC] shadow-md p-5 min-h-fit">
     <small class="bg-subclr text-mainclr rounded-md w-fit p-1 font-bold capitalize mb-5"
         >{book.genre}</small
     >

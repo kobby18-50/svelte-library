@@ -6,8 +6,14 @@ export default {
       colors : {
         mainclr : '#22C55E',
         subclr : '#BBF7D0',
-       
-      }
+      },
+
+      screens : {
+        sm: '270px',
+        md: '768px',
+        lg: '976px',
+        xl: '1440px'
+      },
     }
   },
   plugins: [

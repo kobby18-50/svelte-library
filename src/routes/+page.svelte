@@ -66,9 +66,9 @@
 
 </script>
 
-<main class="mx-10 mt-5">
+<main class="lg:mx-10 sm:mx-5 mt-5">
 	<!-- search -->
-	<div class="flex mx-20">
+	<div class="flex lg:mx-20">
 		<input type="text" name="search" id="search" class="input w-full input-bordered" bind:value={searchValue} />
 		<button class="btn bg-subclr capitalize">Search</button>
 	</div>
@@ -96,4 +96,6 @@
     <h1 class="mt-10 font-bold text-lg capitalize">{title}</h1>
 
 	<svelte:component this={filter} />
+
+	
 </main>

@@ -16,7 +16,7 @@
 
 <!-- card -->
 
-<div class="grid grid-cols-3 gap-y-10 gap-x-5 mt-5">
+<div class="grid lg:grid-cols-4 md:grid-cols-2 gap-y-10 gap-x-5 mt-5">
 	{#each books as book}
 		<Book {book} />
 	{/each}

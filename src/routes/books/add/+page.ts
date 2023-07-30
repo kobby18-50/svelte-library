@@ -8,9 +8,12 @@ export const load = async (loadEvent) => {
 
    const categories =[...new Set(books.map((book) => book.genre))]
 
-   console.log(categories)
+   // console.log(categories)
+
+   const success = 'Book added sucessfully'
+  
 
    return {
-    categories
+    categories, success, 
    }
 }
