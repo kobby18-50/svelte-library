@@ -6,8 +6,6 @@
    import DEL from '../../../images/DEL.svg'
    import EDIT from '../../../images/EDIT.svg'
 
-   console.log(book)
-
    const handleUpdate = async () => {
     goto(`/books/edit/${book._id}`)
    }

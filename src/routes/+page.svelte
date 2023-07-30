@@ -10,66 +10,69 @@
 	import Technology from '../components/genre/Technology.svelte';
 	import RecentBooks from '../components/RecentBooks.svelte';
 	import Books from '../components/Books.svelte';
-	
 
 	export let data;
-	const { categories } = data;
-    let title:string
-	let searchValue = ''
+	const { categories } = data
+	let title: string;
+	let searchValue = '';
 
 	let filter = componentSelector('all categories');
 
 	function componentSelector(value: string) {
 		switch (value) {
 			case 'africa culture':
-                title = 'africa culture'
+				title = 'africa culture';
 				return AfricaCulture;
 
 			case 'fiction':
-                title = 'fiction'
+				title = 'fiction';
 				return Fiction;
 
 			case 'folklore':
-                title = 'folklore'
+				title = 'folklore';
 				return Folklore;
 
 			case 'folktales':
-                title = 'folktales'
+				title = 'folktales';
 				return Folktales;
 
 			case 'history':
-                title = 'history'
+				title = 'history';
 				return History;
 
 			case 'poems':
-                title = 'poems'
+				title = 'poems';
 				return Poems;
 
 			case 'science':
-                title = 'science'
+				title = 'science';
 				return Science;
 
 			case 'short stories':
-                title = 'short stories'
+				title = 'short stories';
 				return ShortStories;
 
 			case 'technology':
-                title = 'technology'
+				title = 'technology';
 				return Technology;
 
 			default:
-                title = 'all categories'
+				title = 'all categories';
 				return Books;
 		}
 	}
-
-
 </script>
 
 <main class="lg:mx-10 sm:mx-5 mt-5">
 	<!-- search -->
 	<div class="flex lg:mx-20">
-		<input type="text" name="search" id="search" class="input w-full input-bordered" bind:value={searchValue} />
+		<input
+			type="text"
+			name="search"
+			id="search"
+			class="input w-full input-bordered"
+			bind:value={searchValue}
+		/>
 		<button class="btn bg-subclr capitalize">Search</button>
 	</div>
 
@@ -80,7 +83,7 @@
 				on:click={() => {
 					filter = componentSelector(genre);
 				}}
-				class="capitalize"
+				class='capitalize'
 			>
 				{genre}
 			</button>
@@ -93,9 +96,7 @@
 	<RecentBooks />
 
 	<!-- main genres -->
-    <h1 class="mt-10 font-bold text-lg capitalize">{title}</h1>
+	<h1 class="mt-10 font-bold text-lg capitalize">{title}</h1>
 
 	<svelte:component this={filter} />
-
-	
 </main>
