@@ -77,7 +77,7 @@
 	</div>
 
 	<!-- categories -->
-	<div class="flex justify-between mt-5">
+	<div class="flex justify-between mt-5 sm:space-x-5">
 		{#each categories as genre}
 			<button
 				on:click={() => {
