@@ -4,13 +4,13 @@
 	import Book from '$lib/Book.svelte';
 
 	let books: BOOK[] = [];
-	const year = 2023
+	const year = 2023;
 	fetchData().then((res) => {
 		books = res.data;
 
 		books = books.filter((book) => {
-			return book.year >= year
-		})
+			return book.year >= year;
+		});
 	});
 </script>
 
@@ -19,5 +19,7 @@
 <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-y-10 gap-x-5 mt-5">
 	{#each books as book}
 		<Book {book} />
+	{:else}
+		<span class="loading loading-spinner loading-lg absolute top-[50%] left-2/4 text-subclr" />
 	{/each}
 </div>

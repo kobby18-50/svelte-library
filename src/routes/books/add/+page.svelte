@@ -39,7 +39,7 @@
 			validator.authorValidator = 'Min length is 3 max length is 20';
 		}
 		if (formData.content.length <= 200) {
-			validator.authorValidator = 'Min length is 200 characters';
+			validator.contentValidator = 'Min length is 200 characters';
 		}
 
 		const data = {
