@@ -83,7 +83,7 @@
 				on:click={() => {
 					filter = componentSelector(genre);
 				}}
-				class='capitalize'
+				class:active={'capitalize'}
 			>
 				{genre}
 			</button>

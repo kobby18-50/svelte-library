@@ -10,7 +10,8 @@
     >
 
     <h1 class="font-bold text-lg">{book.title}</h1>
-    <small>{book.content.slice(0, book.content.length - 500)}....</small>
+    <!-- <small>{book.content.slice(0, book.content.length - 500)}....</small> -->
+    <small class="line-clamp-3">{book.content}....</small>
 
     <div class="card-actions justify-start">
         <a href={`/books/${book._id}`}>
